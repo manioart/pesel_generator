@@ -1,7 +1,16 @@
 <?php
 
+/**
+ * @author Mariusz Świerczek <swierczek-mariusz@o2.pl>
+ */
+
 class PeselGenerator {
 
+    /**
+     * @param Date $dateOfBirth The date of birth
+     * @param string $sex The type of person sex
+     * @return string
+     */
     public static function generateFullPeselNumber($dateOfBirth,$sex) {
 
         $dateOfBirth = date('Y-m-d',strtotime($dateOfBirth));
@@ -55,6 +64,12 @@ class PeselGenerator {
 
     }
 
+    /**
+     * @param string $dateOfBirth The date of birth
+     * @param string $sex The type of person sex
+     * @param string $dayOfBirth The day of birth
+     * @return string
+     */
     public static function generateEndPartOfPesel($generatedPesel,$dayOfBirth,$sex) {
 
         $generatedPesel .= $dayOfBirth;

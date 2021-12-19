@@ -44,7 +44,7 @@ require_once(__ROOT__ . '\classes\PeselGenerator.php');
             </div>
             <button class="ui button mt-10" type="submit">Generuj</button>
         </form>
-        <h1 class="ui header pt-20"><?php echo (isset($_POST['dateofbirth']) && isset($_POST['sex'])) ? PeselGenerator::generatePeselNumber($_POST['dateofbirth'],$_POST['sex']) : 'Podaj niezbędne dane'; ?></h1>
+        <h1 class="ui header pt-20"><?php echo (isset($_POST['dateofbirth']) && isset($_POST['sex'])) ? PeselGenerator::generateFullPeselNumber($_POST['dateofbirth'],$_POST['sex']) : 'Podaj niezbędne dane'; ?></h1>
     </div>
 
 </body>
